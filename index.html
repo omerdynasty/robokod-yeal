@@ -1,53 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Robokod YEAL</title>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
-        <style>
-            body {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-                margin: 0;
-                font-family: 'Fira Mono', monospace;
-                background: #000000;
-                color: #fff;
-                font-size: 2rem;
-                letter-spacing: 1px;
-                padding: 0 16px;
-                box-sizing: border-box;
-            }
-            @media (max-width: 500px) {
-                body {
-                    font-size: 1.1rem;
-                    padding: 0 6px;
-                }
-                img {
-                    width: 80px !important;
-                    height: 80px !important;
-                    margin-bottom: 20px !important;
-                }
-                .social-links {
-                    gap: 16px !important;
-                }
-            }
-        </style>
+    <title>Robokod Yeal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
-        <img src="logo.png" alt="Logo" style="width: 120px; height: 120px; margin-bottom: 32px; border-radius: 16px; box-shadow: 0 2px 12px #0004;">
-        <div>we are duct taping the website.</div>
-                    <div style="display:flex; gap:32px; margin-top:40px;">
-                        <a href="https://chat.whatsapp.com/GSCFc7w3g2CBi9KfJNu4zG" target="_blank" style="color:#fff; text-decoration:underline; font-size:1.1rem;">whatsapp</a>
-                        <a href="https://instagram.com/robokodyeal" target="_blank" style="color:#fff; text-decoration:underline; font-size:1.1rem;">instagram</a>
-                </div>
-                        <div style="margin-top:24px; color:#888; font-size:1rem; text-align:center;">
-                              by <a href="https://github.com/omerdynasty" target="_blank" style="color:#888; text-decoration:none; font-weight:bold;">dyna</a>
-                        </div>
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="summary">Tutkulu lise öğrencilerinden oluşan Robokod Yeal, mühendislik ve yazılım alanında projeler geliştirip ulusal ve uluslararası yarışmalarda başarılar kazanıyor.</div>
+        <div class="section-title">Yarışmalar</div>
+        <div class="yarismalar">
+            <div>
+                <img src="yerel.jpeg" alt="Yerel Yarışma">
+                first lego league ege bölgesi
+            </div>
+            <div>
+                <img src="ulusal.jpeg" alt="Ulusal Yarışma">
+                first lego league ulusal
+            </div>
+            <div>
+                <img src="wro.jpeg" alt="WRO">
+                world robot olympiad türkiye şampiyonası
+            </div>
+            <div>
+                <img src="slovenya.webp" alt="Slovenya">
+                wro avrupa açık şampiyonası
+            </div>
+        </div>
+        <div style="margin-top:14px; text-align:center; color:#eee; font-size:1rem; font-weight:500;">
+            tüm  bu yarışmalarda en az ilk 5'e girdik ve 3 farklı ödül aldık
+        </div>
+        <div class="section-title" style="margin-top:32px;">Kadromuz</div>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="name">ömer s.güncü</div>
+                <div class="role">teknik</div>
+            </div>
+            <div class="team-member">
+                <div class="name">ömer k. bay</div>
+                <div class="role">proje</div>
+            </div>
+            <div class="team-member">
+                <div class="name">bartu uğur</div>
+                <div class="role">tanıtım</div>
+            </div>
+            <div class="team-member">
+                <div class="name">nehir e. çoşkun</div>
+                <div class="role">mentör</div>
+            </div>
+        </div>
+    <!-- iletişim kısmı kaldırıldı -->
+        <div class="social">
+            <a href="https://chat.whatsapp.com/GSCFc7w3g2CBi9KfJNu4zG" target="_blank">whatsapp</a>
+            <a href="https://instagram.com/robokodyeal" target="_blank">instagram</a>
+        </div>
+        <div style="margin-top:10px; text-align:center; color:#aaa; font-size:0.95rem;">
+            <a href="mailto:robokodyeal@gmail.com" style="color:#aaa; text-decoration:none;">robokodyeal@gmail.com</a>
+        </div>
+        <div class="credit" style="margin-top:18px;">
+            by <a href="https://github.com/omerdynasty" target="_blank">dyna</a>
+        </div>
     </div>
 </body>
 </html>
