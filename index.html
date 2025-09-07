@@ -1,234 +1,29 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robotik Takımı - Ana Sayfa</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+        <title>Something on the way</title>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+                font-family: 'Fira Mono', monospace;
+                background: #000000;
+                color: #fff;
+                font-size: 2rem;
+                letter-spacing: 1px;
+            }
+        </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="logo.png" alt="Robokod YEAL Logo" class="logo-image">
-                <h2>Robokod YEAL</h2>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Hakkımızda</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#team" class="nav-link">Takım</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projeler</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#achievements" class="nav-link">Başarılar</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">İletişim</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- About Section -->
-    <section id="home" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>Hakkımızda</h2>
-                <p>Tutkulu öğrencilerden oluşan robotik takımımız</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">⚙️</div>
-                    <h3>Mühendislik</h3>
-                    <p>Mekanik, elektronik ve yazılım mühendisliği alanlarında projeler geliştiriyoruz.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">🏆</div>
-                    <h3>Başarı</h3>
-                    <p>Ulusal robotik yarışmalarında ödüller kazandık ve uluslararası yarışmalara katıldık.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Hedef</h3>
-                    <p>Teknoloji ile geleceğin problemlerine yaratıcı çözümler üretmek.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="team">
-        <div class="container">
-            <div class="section-header">
-                <h2>Yönetim Ekibi</h2>
-                <p>Yolları takımımızdan geçmiş deneyimli ekibimiz</p>
-            </div>
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-image">👨‍💻</div>
-                    <h3>Ömer Said Güncü</h3>
-                    <p class="team-role">Teknik</p>
-                    <p>Teknik geliştirme ve sistem tasarımı uzmanı</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-image">👨‍🔬</div>
-                    <h3>Ömer Kaan Bay</h3>
-                    <p class="team-role">Proje Uzmanı</p>
-                    <p>Proje yönetimi ve koordinasyon uzmanı</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-image">👨‍💼</div>
-                    <h3>Bartu Uğur</h3>
-                    <p class="team-role">Tanıtım</p>
-                    <p>Pazarlama ve tanıtım stratejileri uzmanı</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Projelerimiz</h2>
-                <p>Gerçekleştirdiğimiz başarılı projeler</p>
-            </div>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-image">🌊</div>
-                    <h3>Aquacom</h3>
-                    <p>Deniz altı iletişim sistemi - suya dayanıklı kablosuz iletişim teknolojisi</p>
-                    <div class="project-tags">
-                        <span class="tag">Su Altı</span>
-                        <span class="tag">İletişim</span>
-                        <span class="tag">RF</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">💊</div>
-                    <h3>Akıllı İlaç Kutusu</h3>
-                    <p>Yaşlıların ilaç almasını kolaylaştıran akıllı hatırlatma sistemi</p>
-                    <div class="project-tags">
-                        <span class="tag">IoT</span>
-                        <span class="tag">Sağlık</span>
-                        <span class="tag">Alarm</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">🚦</div>
-                    <h3>Yaya Algılama Sistemi</h3>
-                    <p>Trafik ışıklarını optimize eden akıllı yaya algılama teknolojisi</p>
-                    <div class="project-tags">
-                        <span class="tag">Görüntü İşleme</span>
-                        <span class="tag">Trafik</span>
-                        <span class="tag">AI</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <div class="section-header">
-                <h2>Başarılarımız</h2>
-                <p>Katıldığımız yarışmalar ve kazandığımız ödüller</p>
-            </div>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <img src="ulusal.jpeg" alt="Ulusal Yarışma" class="achievement-image">
-                    <h3>FLL Ulusal Yarışması</h3>
-                    <p>Okulumuzu First Lego League Ulusal yarışmasında temsil ettik.</p>
-                </div>
-                <div class="achievement-card">
-                    <img src="wro.jpeg" alt="WRO Yarışması" class="achievement-image">
-                    <h3>WRO Yarışması</h3>
-                    <p>Okulumuzu World Robot Olympiad yarışmasında temsil ettik.</p>
-                </div>
-                <div class="achievement-card">
-                    <img src="yerel.jpeg" alt="Yerel Yarışma" class="achievement-image">
-                    <h3>FLL Yerel Yarışması</h3>
-                    <p>Okulumuzu First Lego League Yerel yarışmasında temsil ettik.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>İletişim</h2>
-                <p>Bizimle iletişime geçmek için e-postamızı kullanabilirsiniz. Ancak en aşağıda WhatsApp topluluğumuzun linkini bulabilirsiniz, WhatsApp hattından daha hızlı iletişim sağlayabilirsiniz.</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <h3>E-postamız</h3>
-                        <p>robokodyeal@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <h3>Okulumuzun Telefonu</h3>
-                        <p>+90 232 375 11 84</p>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <h3>Adresimiz</h3>
-                        <p>Yunus Emre Anadolu Lisesi<br>127/1 Sok. No:2 Evka3 Bornova / İZMİR</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Robokod YEAL</h3>
-                    <p>Geleceği bugünden inşa ediyoruz</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Hızlı Linkler</h4>
-                    <ul>
-                        <li><a href="#home">Hakkımızda</a></li>
-                        <li><a href="#team">Takım</a></li>
-                        <li><a href="#projects">Projeler</a></li>
-                        <li><a href="#achievements">Başarılar</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Sosyal Medya</h4>
-                    <div class="social-links">
-                        <a href="https://instagram.com/robokodyeal" target="_blank" class="social-link">Instagram</a>
-                        <a href="https://chat.whatsapp.com/GSCFc7w3g2CBi9KfJNu4zG" target="_blank" class="social-link">WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 <a href="https://github.com/omerdynasty" target="_blank" style="color: inherit; text-decoration: underline;">Ömer Said Güncü</a> Tüm hakları saklıdır.</p>
-                <p>Robokod YEAL</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+        <img src="logo.png" alt="Logo" style="width: 120px; height: 120px; margin-bottom: 32px; border-radius: 16px; box-shadow: 0 2px 12px #0004;">
+        <div>we are duct taping the website.</div>
+    </div>
 </body>
 </html>
