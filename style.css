@@ -1,76 +1,158 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #111827;
+    --accent: #8b5cf6;
+    --text: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --background: #030712;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 body {
-    background: #1a337b;
-    color: #fff;
-    font-family: 'Fira Mono', monospace;
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
     margin: 0;
     min-height: 100vh;
-    padding: 0 16px;
-    box-sizing: border-box;
-    text-transform: lowercase;
+    padding: 0;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+    background-attachment: fixed;
 }
 .container {
-    max-width: 480px;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 32px 0 0 0;
+    padding: 32px 16px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 48px;
+    animation: fadeIn 0.8s ease-out;
+    overflow-x: hidden;
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .logo {
-    width: 160px;
-    height: 160px;
-    border-radius: 16px;
-    box-shadow: 0 2px 12px #0004;
+    width: 180px;
+    height: 180px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.2);
     margin-bottom: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(37, 99, 235, 0.3);
 }
 .summary {
-    font-size: 1.1rem;
-    color: #eee;
+    font-size: 1.25rem;
+    color: var(--text);
     text-align: center;
     font-weight: 500;
     margin-bottom: 0;
+    line-height: 1.6;
+    max-width: 640px;
+    animation: slideUp 0.8s ease-out 0.2s both;
 }
+
 .section-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 12px;
-    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--text);
     letter-spacing: 1px;
     text-align: center;
-    text-transform: lowercase;
+    font-family: 'Space Mono', monospace;
+    position: relative;
+    animation: slideUp 0.8s ease-out 0.4s both;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    border-radius: 2px;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .yarismalar {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 24px;
     width: 100%;
     margin-bottom: 0;
 }
+
 .yarismalar div {
-    background: #111;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px #0006;
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px 6px;
-    font-size: 0.98rem;
+    padding: 20px;
+    font-size: 1rem;
     font-weight: 500;
-    color: #fff;
+    color: var(--text);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.yarismalar div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+}
+
 .yarismalar img {
-    height: 128px;
-    width: 256px;
-    border-radius: 6px;
-    margin-bottom: 8px;
+    height: 160px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 16px;
     object-fit: cover;
     object-position: center;
-    background: #222;
-    box-shadow: 0 2px 8px #0006;
-    border: 2px solid #222;
+    background: var(--secondary);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: block;
-    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.yarismalar div:hover img {
+    transform: scale(1.02);
 }
 
 .contact {
@@ -81,40 +163,67 @@ body {
 }
 .social {
     display: flex;
-    gap: 24px;
+    gap: 32px;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: 24px;
+    animation: fadeIn 0.8s ease-out 0.6s both;
 }
+
 .social a {
-    color: #fff;
-    font-size: 1.08rem;
-    text-decoration: underline;
+    color: var(--text);
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social a:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
 }
 .team-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    width: 90%;
-    margin: 0px 0;
+    gap: 24px;
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    padding: 0 1px; /* Prevent possible overflow from box-shadow */
 }
 
 .team-member {
-    background: #111;
-    border-radius: 12px;
-    padding: 16px 10px;
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px 16px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
 }
 
 .team-member .role {
-    color: #888;
+    color: var(--text-secondary);
     font-size: 0.9rem;
-    margin-top: 4px;
+    margin-top: 8px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .team-member .name {
-    color: #fff;
-    font-size: 1rem;
+    color: var(--text);
+    font-size: 1.1rem;
     margin: 0;
+    font-weight: 600;
 }
 
 @media (max-width: 500px) {
@@ -134,39 +243,117 @@ body {
 }
 
 .credit {
-    margin-top: 28px;
-    margin-bottom: 24px;
-    color: #888;
+    margin-top: 40px;
+    margin-bottom: 32px;
+    color: var(--text-secondary);
     font-size: 1rem;
     text-align: center;
+    animation: fadeIn 0.8s ease-out 0.8s both;
 }
+
 .credit a {
-    color: #888;
+    color: var(--text);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
+
+.credit a:hover {
+    color: var(--accent);
+}
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 24px 16px;
+        gap: 32px;
+    }
+    
+    .logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .yarismalar {
+        gap: 16px;
+        width: 100%;
+    }
+
+    .summary {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+}
+
 @media (max-width: 500px) {
     .container {
-        padding-top: 12px;
-        gap: 16px;
+        padding: 16px 12px;
+        gap: 24px;
+        width: 100%;
     }
+
     .logo {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
-    .yarismalar {
-        gap: 7px;
-    }
-    .yarismalar img {
-        height: 92px;
-        width: 180px;
-        margin-bottom: 6px;
-    }
-    .section-title {
-        font-size: 0.95rem;
-    }
+
     .summary {
-        font-size: 0.93rem;
+        font-size: 0.95rem;
+        padding: 0 8px;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+    }
+
+    .yarismalar {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 8px;
+    }
+
+    .yarismalar div {
+        padding: 12px;
+    }
+
+    .yarismalar img {
+        height: 180px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 8px;
+    }
+
+    .team-member {
+        padding: 12px;
+    }
+
+    .team-member .name {
+        font-size: 0.9rem;
+    }
+
+    .team-member .role {
+        font-size: 0.8rem;
+        margin-top: 4px;
+    }
+
+    .social {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        padding: 0 32px;
+    }
+
+    .social a {
+        text-align: center;
+        padding: 12px;
+    }
+
+    .credit {
+        margin-top: 24px;
+        margin-bottom: 24px;
     }
 }
 
