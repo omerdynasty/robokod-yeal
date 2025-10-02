@@ -155,6 +155,60 @@ body {
     transform: scale(1.02);
 }
 
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    padding: 0 1px;
+}
+
+.sponsor-card {
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+}
+
+.sponsor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
+}
+
+.sponsor-card img {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-card:hover img {
+    transform: scale(1.05);
+}
+
+.sponsor-name {
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.sponsor-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
 .contact {
     margin-top: 8px;
     text-align: center;
